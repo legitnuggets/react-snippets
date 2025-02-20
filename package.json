@@ -1,7 +1,7 @@
 {
     "name": "react-snippets",
     "displayName": "React Snippets",
-    "description": "A fork of \"ES7+ React/Redux/React-Native snippets\" extenstion, stripped from Redux, React Native, and tests snippets",
+    "description": "A fork of \"ES7+ React/Redux/React-Native snippets\" extension, stripped from Redux, React Native, and tests snippets",
     "version": "1.0.0",
     "publisher": "legitnuggets",
     "icon": "images/logo.png",
