@@ -1,23 +1,14 @@
-import extensionConfig from './extensionConfig';
-import { formatSnippet } from './formatters';
-import { Snippet } from './generateSnippets';
-import replaceOrRemoveReactImport from './replaceOrRemoveReactImport';
+// import extensionConfig from './extensionConfig';
+import { Snippet } from "./generateSnippets";
+import replaceOrRemoveReactImport from "./replaceOrRemoveReactImport";
 
 const parseSnippetToBody = (snippet: Snippet) => {
-  const { importReactOnTop } = extensionConfig();
-  const body =
-    typeof snippet.body === 'string' ? snippet.body : snippet.body.join('\n');
-
-  const snippetBody = importReactOnTop
-    ? body
-    : replaceOrRemoveReactImport({
+    const snippetBody = replaceOrRemoveReactImport({
         prefix: snippet.prefix,
         body: snippet.body,
-      });
+    });
 
-  const formattedSnippet = formatSnippet(snippetBody).split('\n');
-
-  return formattedSnippet;
+    return snippetBody.split("\n");
 };
 
 export default parseSnippetToBody;
